@@ -1,0 +1,40 @@
+/* puzzles.log — deliberately boring. monochrome, monospace, no chrome. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: #0e0e0e;
+  color: #b5b5b5;
+  font-family: "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(14px, 3.8vw, 16px);
+  line-height: 1.55;
+  padding: 12px 14px 40px;
+  max-width: 560px;
+}
+#top {
+  display: flex; justify-content: space-between; gap: 12px;
+  color: #7d7d7d; white-space: nowrap;
+  border-bottom: 1px solid #242424; padding-bottom: 6px; margin-bottom: 8px;
+}
+#top .dim { color: #5a5a5a; }
+#status { color: #8f8f8f; margin: 2px 0 6px; min-height: 1.5em; }
+#board { margin: 0; user-select: none; -webkit-user-select: none; cursor: default; }
+#board .coord { display: inline-block; width: 2ch; color: #5a5a5a; }
+#board .sq {
+  display: inline-block; width: 2ch; text-align: left;
+  padding: 1px 0; border-radius: 2px;
+}
+#board .sq.lm { background: #1b1b1b; }
+#board .sq.sel { background: #b5b5b5; color: #0e0e0e; }
+#board .sq.cur { text-decoration: underline; text-underline-offset: 3px; }
+#board .flab { display: inline-block; width: 2ch; color: #5a5a5a; }
+#history { color: #7d7d7d; min-height: 1.5em; margin-top: 6px; }
+#log { margin-top: 4px; min-height: 4.5em; color: #9a9a9a; }
+#log div { white-space: pre-wrap; }
+#inputrow { display: flex; gap: 1ch; margin-top: 6px; align-items: baseline; }
+#prompt { color: #7d7d7d; }
+#cmd {
+  flex: 1; background: transparent; border: none; outline: none;
+  color: #d6d6d6; font: inherit; padding: 0; caret-color: #b5b5b5;
+}
+#hint { color: #5a5a5a; margin-top: 10px; font-size: 0.85em; }
+a { color: inherit; }
